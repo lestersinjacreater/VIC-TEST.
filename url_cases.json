@@ -1,0 +1,17 @@
+{
+  "description": "Link-checker cases shared by the TypeScript and Python test suites. Examples use reserved .test/.example domains or well-known official domains.",
+  "cases": [
+    { "input": "http://mpesa-care-verify.test/login", "flags": ["not_https", "brand_in_unrelated_domain", "suspicious_path"], "not_flags": ["ip_host"], "min_score": 40 },
+    { "input": "https://safaricorn-care.test/verify", "flags": ["lookalike_brand", "suspicious_path"], "min_score": 40 },
+    { "input": "http://41.0.0.12/mpesa/reversal", "flags": ["ip_host", "not_https", "suspicious_path"], "min_score": 40 },
+    { "input": "bit.ly/3xYzDemo", "flags": ["shortener"], "min_score": 15 },
+    { "input": "https://www.safaricom.co.ke/personal/m-pesa", "flags": ["official_match"], "not_flags": ["brand_in_unrelated_domain", "lookalike_brand"], "max_score": 14 },
+    { "input": "https://safaricom.co.ke.account-update.test/signin", "flags": ["brand_in_unrelated_domain", "excessive_subdomains", "suspicious_path"], "min_score": 40 },
+    { "input": "https://login.example@fuliza-boost.test/", "flags": ["userinfo_trick"], "min_score": 30 },
+    { "input": "https://xn--safricom-9za.test/", "flags": ["punycode"], "min_score": 30 },
+    { "input": "https://m-pesa-bonus-claim-now.test/claim", "flags": ["brand_in_unrelated_domain", "many_hyphens", "suspicious_path"], "min_score": 40 },
+    { "input": "https://kcbgroup.com", "flags": ["official_match"], "max_score": 14 },
+    { "input": "https://weather.example/today", "flags": ["reserved_tld"], "not_flags": ["brand_in_unrelated_domain"], "max_score": 14 },
+    { "input": "not a url", "invalid": true }
+  ]
+}

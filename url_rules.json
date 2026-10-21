@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "description": "LINDA local link heuristics, shared by the browser and the backend. The official-domain list is a small demo allowlist, not a complete register of legitimate domains.",
+  "brands": [
+    { "name": "Safaricom", "keywords": ["safaricom"], "official_domains": ["safaricom.co.ke", "safaricom.com"] },
+    { "name": "M-PESA", "keywords": ["mpesa"], "official_domains": ["safaricom.co.ke"] },
+    { "name": "Fuliza", "keywords": ["fuliza"], "official_domains": ["safaricom.co.ke"] },
+    { "name": "KCB", "keywords": ["kcb", "kcbgroup"], "official_domains": ["kcbgroup.com"] },
+    { "name": "Equity Bank", "keywords": ["equitybank", "equity"], "official_domains": ["equitybank.co.ke", "equitygroupholdings.com"] },
+    { "name": "KRA", "keywords": ["kra", "itax"], "official_domains": ["kra.go.ke"] },
+    { "name": "Co-operative Bank", "keywords": ["coopbank", "co-opbank"], "official_domains": ["co-opbank.co.ke"] },
+    { "name": "Airtel", "keywords": ["airtel"], "official_domains": ["airtelkenya.com"] }
+  ],
+  "lookalike_min_keyword_length": 5,
+  "shorteners": ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "cutt.ly", "rb.gy", "shorturl.at", "tiny.cc", "buff.ly", "rebrand.ly", "s.id", "bit.do", "t.ly", "v.gd"],
+  "multi_part_suffixes": ["co.ke", "or.ke", "go.ke", "ac.ke", "ne.ke", "me.ke", "sc.ke", "info.ke", "mobi.ke", "co.uk", "com.ng", "co.za"],
+  "risky_tlds": ["xyz", "top", "club", "online", "site", "live", "icu", "buzz", "click", "link", "work", "rest", "fit", "gq", "ml", "cf", "tk", "ga", "zip", "mov", "loan", "win", "bid", "cam", "cyou", "sbs", "monster", "support", "help"],
+  "reserved_tlds": ["test", "example", "invalid", "localhost"],
+  "extractable_tlds": ["com", "net", "org", "info", "ke", "co.ke", "or.ke", "go.ke", "ac.ke", "me.ke", "io", "co", "app", "ly", "gl", "at", "gd", "cc", "id", "do", "me", "xyz", "top", "club", "online", "site", "live", "icu", "buzz", "click", "link", "work", "rest", "fit", "gq", "ml", "cf", "tk", "ga", "zip", "mov", "loan", "win", "bid", "cam", "cyou", "sbs", "monster", "support", "help", "test", "example", "invalid"],
+  "suspicious_path_keywords": ["login", "signin", "sign-in", "verify", "verification", "secure", "update", "account", "confirm", "reversal", "refund", "claim", "prize", "bonus", "otp", "pin", "kyc", "reactivate", "unlock", "wallet", "limit", "boost"],
+  "homoglyphs": { "0": "o", "1": "l", "3": "e", "4": "a", "5": "s", "7": "t", "rn": "m", "vv": "w", "@": "a" },
+  "weights": {
+    "not_https": 5,
+    "ip_host": 35,
+    "shortener": 20,
+    "risky_tld": 15,
+    "non_ascii": 30,
+    "punycode": 30,
+    "lookalike_brand": 40,
+    "brand_in_unrelated_domain": 30,
+    "excessive_subdomains": 15,
+    "userinfo_trick": 30,
+    "many_hyphens": 10,
+    "suspicious_path": 10,
+    "long_url": 5
+  },
+  "bands": [
+    { "min": 0, "max": 14, "id": "no_obvious", "label": "No obvious warning signs", "summary": "LINDA's local checks found nothing obvious. That does not mean the link is safe." },
+    { "min": 15, "max": 39, "id": "caution", "label": "Caution", "summary": "Some warning signs. Do not enter any details on this site." },
+    { "min": 40, "max": 69, "id": "suspicious", "label": "Suspicious", "summary": "Several phishing patterns. Do not open it." },
+    { "min": 70, "max": 100, "id": "high", "label": "High risk", "summary": "Strong phishing indicators. Do not open it and report it." }
+  ]
+}

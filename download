@@ -1,0 +1,20 @@
+# Python
+backend/.venv/
+__pycache__/
+*.pyc
+backend/linda.db
+backend/*.db
+backend/artifacts/
+backend/.env
+.pytest_cache/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+frontend/.env
+*.tsbuildinfo
+
+# OS
+.DS_Store

@@ -1,0 +1,347 @@
+{
+  "version": "1.0.0",
+  "description": "LINDA transparent scam-message heuristics. One rulebook shared by the in-browser scanner (TypeScript) and the backend (Python). Patterns use only syntax that behaves identically in JavaScript and Python regular expressions and are matched case-insensitively.",
+  "negation_window": 22,
+  "negation_pattern": "(do not|don't|dont|never|not to|kamwe|usi(tume|shiriki|mpe|mwambie|toe|tumie|seme|pe))[\\s,]*$",
+  "bands": [
+    {
+      "min": 0,
+      "max": 19,
+      "id": "low",
+      "label": "Low risk",
+      "summary": "No strong scam signals found. That is not a guarantee the message is safe."
+    },
+    {
+      "min": 20,
+      "max": 44,
+      "id": "caution",
+      "label": "Caution",
+      "summary": "Some warning signs. Verify with the sender through a channel you already trust."
+    },
+    {
+      "min": 45,
+      "max": 69,
+      "id": "high",
+      "label": "High risk",
+      "summary": "Several scam signals. Do not reply, click, pay or share codes."
+    },
+    {
+      "min": 70,
+      "max": 100,
+      "id": "very_high",
+      "label": "Very high risk",
+      "summary": "Matches common scam patterns closely. Treat it as a scam attempt."
+    }
+  ],
+  "categories": {
+    "otp_pin_harvest": "PIN or OTP harvesting",
+    "reversal": "Fake M-PESA reversal",
+    "prize": "Fake prize or promotion",
+    "verification": "Urgent account verification",
+    "impersonation": "Brand or staff impersonation",
+    "payment_redirection": "Payment redirection",
+    "loan": "Loan or limit scam",
+    "phishing_link": "Malicious or misleading link",
+    "social_engineering": "Pressure and social engineering",
+    "job": "Fake job offer",
+    "other": "Other suspicious message"
+  },
+  "rules": [
+    {
+      "id": "credential_request",
+      "category": "otp_pin_harvest",
+      "label": "Asks you to share your PIN or password",
+      "weight": 45,
+      "negatable": true,
+      "patterns": [
+        "\\b(send|share|give|tell|reply with|confirm|provide|nitumie|tuma|nipe|niambie|nitajie|thibitisha)\\b[^.\\n]{0,40}\\b(pin|password|passcode|nenosiri|nambari ya siri)\\b"
+      ],
+      "advice": "Safaricom says its staff will never ask for your M-PESA PIN. Never share it with anyone."
+    },
+    {
+      "id": "otp_request",
+      "category": "otp_pin_harvest",
+      "label": "Asks you to share a one-time code",
+      "weight": 40,
+      "negatable": true,
+      "patterns": [
+        "\\b(send|share|give|forward|tell|reply with|read out|read me|nitumie|tuma|nipe|nisomee|niambie|nitajie)\\b[^.\\n]{0,40}\\b(otp|code|msimbo|one[- ]time)\\b",
+        "\\b(code|msimbo|otp)\\b[^.\\n]{0,30}\\b(utakayopokea|uliyopokea|iliyotumwa|you (will )?receive|you have received|you received|we sent|just sent)\\b"
+      ],
+      "advice": "One-time codes are only for you. Anyone asking you to read one out is trying to take over an account."
+    },
+    {
+      "id": "pin_to_receive",
+      "category": "otp_pin_harvest",
+      "label": "Says a PIN is needed to receive or reverse money",
+      "weight": 30,
+      "negatable": false,
+      "patterns": [
+        "\\bpin\\b[^.\\n]{0,40}\\b(receive|pokea|claim|unlock|reverse|reversal|kurudisha)\\b",
+        "\\b(receive|pokea|claim|reverse|reversal)\\b[^.\\n]{0,40}\\bpin\\b"
+      ],
+      "advice": "You never need a PIN to receive money. Only the sender enters a PIN."
+    },
+    {
+      "id": "reversal_story",
+      "category": "reversal",
+      "label": "Claims money was sent to you by mistake",
+      "weight": 30,
+      "negatable": false,
+      "patterns": [
+        "\\b(sent|send|tuma|tumia|nimekutumia|nimetuma|imeingia|nimekusendia)\\b[^.\\n]{0,50}\\b(by mistake|wrongly|in error|kimakosa|kwa makosa|bila kujua|accidentally)\\b",
+        "\\b(kimakosa|kwa makosa)\\b",
+        "\\b(reverse|rudisha|refund|return|nirudishie)\\b[^.\\n]{0,40}\\b(money|pesa|doh|dooh|cash|ksh|kes|it)\\b"
+      ],
+      "advice": "Check your real M-PESA balance first. Safaricom handles genuine reversals; do not send money back yourself because a stranger asks."
+    },
+    {
+      "id": "prize_promo",
+      "category": "prize",
+      "label": "Says you have won a prize or promotion",
+      "weight": 25,
+      "negatable": false,
+      "patterns": [
+        "\\b(you have won|you've won|you won|umeshinda|mshindi|winner|hongera|congratulations)\\b",
+        "\\b(prize|zawadi|jackpot|lucky draw|promotion|promo|giveaway)\\b"
+      ],
+      "advice": "If you did not enter a promotion, you did not win one. Check promotions on the organisation's official channels."
+    },
+    {
+      "id": "advance_fee",
+      "category": "prize",
+      "label": "Asks for a fee before you can receive something",
+      "weight": 25,
+      "negatable": false,
+      "patterns": [
+        "\\b(registration|processing|clearance|activation|delivery|service|application|interview)\\s+(fee|charge|charges)\\b",
+        "\\b(ada ya|lipa ada|pay a fee|send ksh ?[0-9,]+ to (claim|receive|activate|unlock))\\b",
+        "\\b(tuma|lipa|send|pay)\\b[^.\\n]{0,30}\\b(ksh|kes|bob|doh)\\s?[0-9,]+[^.\\n]{0,40}\\b(to (claim|receive|activate|unlock|release)|ili (upokee|ufungue|kupokea))\\b"
+      ],
+      "advice": "Real prizes, loans and jobs do not ask you to pay first."
+    },
+    {
+      "id": "urgency",
+      "category": "social_engineering",
+      "label": "Pressures you to act fast",
+      "weight": 12,
+      "negatable": false,
+      "patterns": [
+        "\\b(urgent|urgently|immediately|today only|last chance|haraka|sasa hivi|mara moja|leo tu|within [0-9]+ ?(minutes|mins|hours|hrs)|kabla ya saa|expires? (today|soon|in))\\b"
+      ],
+      "advice": "Pressure to act now is a classic scam tactic. Slow down and verify."
+    },
+    {
+      "id": "account_threat",
+      "category": "verification",
+      "label": "Threatens to block or suspend your account or line",
+      "weight": 15,
+      "negatable": false,
+      "patterns": [
+        "\\b(account|line|sim|laini|akaunti|m-?pesa)\\b[^.\\n]{0,40}\\b(blocked|suspended|deactivated|frozen|closed|itafungwa|itazimwa|imefungwa|imesimamishwa|will be (blocked|suspended|closed))\\b"
+      ],
+      "advice": "Check your account status yourself through an official app or shop, not through a link or number in the message."
+    },
+    {
+      "id": "verification_request",
+      "category": "verification",
+      "label": "Asks you to verify or update account details",
+      "weight": 15,
+      "negatable": false,
+      "patterns": [
+        "\\b(verify|update|confirm|validate|re-?activate|thibitisha|uthibitishe|tuthibitishe|sasisha)\\b[^.\\n]{0,40}\\b(account|details|information|line|sim|m-?pesa|kyc|registration|usajili|akaunti|laini)\\b"
+      ],
+      "advice": "Organisations do not ask you to verify accounts through links or numbers sent by SMS."
+    },
+    {
+      "id": "brand_mention",
+      "category": "impersonation",
+      "label": "Mentions a trusted brand",
+      "weight": 8,
+      "negatable": false,
+      "patterns": [
+        "\\b(safaricom|m-?pesa|fuliza|bonga|kcb|equity|co-?op bank|kra|hustler fund|ncba|absa|airtel)\\b"
+      ],
+      "advice": "Scammers borrow trusted names. A brand name alone proves nothing about who sent the message."
+    },
+    {
+      "id": "staff_claim",
+      "category": "impersonation",
+      "label": "Claims to be customer care or staff",
+      "weight": 15,
+      "negatable": false,
+      "patterns": [
+        "\\b(customer care|customer service|customer support|huduma kwa wateja|calling from|kutoka safaricom|from safaricom)\\b",
+        "\\b(safaricom|m-?pesa|bank)\\s+(agent|staff|official|team|support|department|office)\\b"
+      ],
+      "advice": "Safaricom's published guidance says it calls customers from 0722 000 000. Hang up and call back through an official number."
+    },
+    {
+      "id": "payment_redirection",
+      "category": "payment_redirection",
+      "label": "Asks you to pay a different number, till or account",
+      "weight": 25,
+      "negatable": true,
+      "patterns": [
+        "\\b(send|pay|deposit|tuma|lipa)\\b[^.\\n]{0,40}\\b(to (this|my|the following|another|a new|our new) (number|till|paybill|account|line)|kwa (namba|nambari) hii|kwa till hii)\\b",
+        "\\b(use|tumia) (this|hii|the new|our new) (number|namba|till|paybill|account)\\b",
+        "\\b(do not|don't) use (the|our) (old|usual|previous) (number|till|paybill|account)\\b"
+      ],
+      "advice": "Confirm any change of payment details by calling the person or business on a number you already know."
+    },
+    {
+      "id": "loan_offer",
+      "category": "loan",
+      "label": "Offers a loan or limit increase",
+      "weight": 20,
+      "negatable": false,
+      "patterns": [
+        "\\b(loan|mkopo|instant cash|pre-?approved|umehitimu|qualified for|you qualify)\\b",
+        "\\b(fuliza|limit)\\b[^.\\n]{0,20}\\b(boost|increase|upgrade|ongeza|imeongezwa)\\b"
+      ],
+      "advice": "Check loan and Fuliza limits only in official apps or USSD menus you open yourself."
+    },
+    {
+      "id": "dial_code",
+      "category": "social_engineering",
+      "label": "Tells you to dial a code",
+      "weight": 30,
+      "negatable": false,
+      "patterns": [
+        "\\b(dial|piga|bonyeza)\\s*\\*[0-9*#]+",
+        "\\*[0-9]{2,3}\\*[0-9*]+#?"
+      ],
+      "advice": "Safaricom warns never to dial a code a caller or message gives you. Some codes can divert your calls or move money."
+    },
+    {
+      "id": "call_back",
+      "category": "social_engineering",
+      "label": "Asks you to call or reply to a specific number",
+      "weight": 10,
+      "negatable": false,
+      "patterns": [
+        "\\b(call|piga simu|ita|reply|jibu|whatsapp)\\b[^.\\n]{0,25}(\\b0[17][0-9]{8}\\b|\\+?254 ?[17][0-9]{8}\\b|\\bthis number\\b|\\bnamba hii\\b)"
+      ],
+      "advice": "Call organisations back on numbers from their official website or the back of your card, not the one in the message."
+    },
+    {
+      "id": "secrecy",
+      "category": "social_engineering",
+      "label": "Asks you to keep it secret",
+      "weight": 10,
+      "negatable": false,
+      "patterns": [
+        "\\b(don't tell anyone|do not tell anyone|keep this (secret|confidential)|usimwambie mtu|usimwambie yeyote)\\b"
+      ],
+      "advice": "Requests for secrecy are designed to stop you from checking with someone you trust."
+    },
+    {
+      "id": "emergency_story",
+      "category": "social_engineering",
+      "label": "Describes an emergency to get money",
+      "weight": 15,
+      "negatable": false,
+      "patterns": [
+        "\\b(accident|ajali|hospital|hospitali|nimekwama|i am stuck|i'm stuck|arrested|nimeshikwa|emergency|dharura)\\b"
+      ],
+      "advice": "Call the person directly on their usual number before sending anything."
+    },
+    {
+      "id": "job_offer",
+      "category": "job",
+      "label": "Offers a job or recruitment",
+      "weight": 10,
+      "negatable": false,
+      "patterns": [
+        "\\b(job offer|vacancy|vacancies|nafasi ya kazi|recruitment|shortlisted|umechaguliwa)\\b"
+      ],
+      "advice": "Genuine employers do not charge application, interview or uniform fees."
+    }
+  ],
+  "combos": [
+    {
+      "id": "brand_plus_secret",
+      "requires_any_of": [
+        [
+          "brand_mention",
+          "credential_request"
+        ],
+        [
+          "brand_mention",
+          "otp_request"
+        ],
+        [
+          "staff_claim",
+          "credential_request"
+        ],
+        [
+          "staff_claim",
+          "otp_request"
+        ]
+      ],
+      "bonus": 15,
+      "label": "Uses a trusted name and asks for a secret code"
+    },
+    {
+      "id": "reversal_plus_redirect",
+      "requires_any_of": [
+        [
+          "reversal_story",
+          "payment_redirection"
+        ],
+        [
+          "reversal_story",
+          "call_back"
+        ]
+      ],
+      "bonus": 10,
+      "label": "Mistaken-payment story with a request to pay or call"
+    },
+    {
+      "id": "prize_plus_fee",
+      "requires_any_of": [
+        [
+          "prize_promo",
+          "advance_fee"
+        ]
+      ],
+      "bonus": 15,
+      "label": "Prize that requires a fee"
+    },
+    {
+      "id": "staff_plus_dial",
+      "requires_any_of": [
+        [
+          "staff_claim",
+          "dial_code"
+        ],
+        [
+          "brand_mention",
+          "dial_code"
+        ]
+      ],
+      "bonus": 10,
+      "label": "Claims to be official and asks you to dial a code"
+    },
+    {
+      "id": "link_plus_verify",
+      "requires_any_of": [
+        [
+          "link_present",
+          "verification_request"
+        ],
+        [
+          "link_present",
+          "account_threat"
+        ]
+      ],
+      "bonus": 10,
+      "label": "Link combined with an account warning"
+    }
+  ],
+  "link_scoring": {
+    "base_weight": 8,
+    "url_risk_factor": 0.4,
+    "label": "Contains a link"
+  }
+}

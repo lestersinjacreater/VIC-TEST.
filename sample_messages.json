@@ -1,0 +1,89 @@
+{
+  "description": "Fictional sample messages for the scanner. Phone numbers use the 0700 000 xxx demo pattern and links use the reserved .test domain so no real person or website is labelled. These double as parity test cases for the TypeScript and Python engines.",
+  "samples": [
+    {
+      "id": "otp_care_en",
+      "language": "English",
+      "title": "Fake customer care asks for a code",
+      "text": "Dear customer, this is Safaricom customer care. Your M-PESA account will be suspended today. To stop this, send the code you will receive to 0700000142 or verify at http://mpesa-care-verify.test/login",
+      "expect": { "min_score": 70, "band": "very_high", "rules": ["otp_request", "staff_claim", "account_threat", "verification_request", "link_present"], "category": "otp_pin_harvest" }
+    },
+    {
+      "id": "reversal_sw",
+      "language": "Kiswahili",
+      "title": "Ujumbe wa kurudisha pesa",
+      "text": "Habari, nimekutumia Ksh 2,500 kimakosa kwa M-PESA. Tafadhali nirudishie pesa hizo haraka kwa namba hii 0700000117. Mungu akubariki.",
+      "expect": { "min_score": 45, "band_at_least": "high", "rules": ["reversal_story", "urgency"], "category": "reversal" }
+    },
+    {
+      "id": "reversal_sheng",
+      "language": "Sheng",
+      "title": "Sheng mistaken-payment story",
+      "text": "Bro nimekusendia doh 1,500 kimakosa, ilikuwa ya rent. Nirudishie sasa hivi tafadhali, piga simu 0700000117 nikueleze.",
+      "expect": { "min_score": 45, "band_at_least": "high", "rules": ["reversal_story", "urgency", "call_back"], "category": "reversal" }
+    },
+    {
+      "id": "prize_en",
+      "language": "English",
+      "title": "Fake promotion with a fee",
+      "text": "CONGRATULATIONS! You have won KES 50,000 in the Safaricom Bonga Bonanza promotion. Pay a registration fee of Ksh 1,200 to till 000123 to claim your prize within 2 hours.",
+      "expect": { "min_score": 70, "band": "very_high", "rules": ["prize_promo", "advance_fee", "brand_mention", "urgency"], "category": "prize" }
+    },
+    {
+      "id": "fuliza_link_en",
+      "language": "English",
+      "title": "Fuliza limit boost link",
+      "text": "You qualify for a Fuliza limit boost to Ksh 25,000. Update your details now at https://fuliza-boost.test/kyc/update before the offer expires today.",
+      "expect": { "min_score": 45, "band_at_least": "high", "rules": ["loan_offer", "verification_request", "link_present"], "category": "loan" }
+    },
+    {
+      "id": "pin_sw",
+      "language": "Kiswahili",
+      "title": "Ombi la PIN kutoka kwa 'mhudumu'",
+      "text": "Mteja mpendwa, laini yako itafungwa leo tu. Mhudumu wa huduma kwa wateja anahitaji uthibitishe usajili. Nitumie PIN yako ya M-PESA ili tuthibitishe akaunti.",
+      "expect": { "min_score": 70, "band": "very_high", "rules": ["credential_request", "account_threat", "staff_claim"], "category": "otp_pin_harvest" }
+    },
+    {
+      "id": "dial_code_en",
+      "language": "English",
+      "title": "Caller asks you to dial a code",
+      "text": "Hello, M-PESA department here. To receive your reversal please dial *33*0000*0700000142# and wait for confirmation.",
+      "expect": { "min_score": 45, "band_at_least": "high", "rules": ["dial_code", "staff_claim"], "category": "social_engineering" }
+    },
+    {
+      "id": "job_fee_sheng",
+      "language": "Sheng",
+      "title": "Job offer with an interview fee",
+      "text": "Uko shortlisted! Nafasi ya kazi ya driver iko wazi. Tuma interview fee ya bob 800 kwa till 000456 ili upokee barua ya kazi.",
+      "expect": { "min_score": 30, "band_at_least": "caution", "rules": ["job_offer", "advance_fee"], "category": "prize" }
+    },
+    {
+      "id": "redirect_en",
+      "language": "English",
+      "title": "Landlord changes the paybill",
+      "text": "Hi tenant, do not use the old paybill. Pay this month's rent to this number 0700000188 urgently, the bank account is closed.",
+      "expect": { "min_score": 30, "band_at_least": "caution", "rules": ["payment_redirection", "urgency"], "category": "payment_redirection" }
+    },
+    {
+      "id": "legit_otp_en",
+      "language": "English",
+      "title": "Ordinary one-time code notice",
+      "text": "Your login code is 482913. Do not share this code with anyone. It expires in 5 minutes.",
+      "expect": { "max_score": 19, "band": "low", "absent_rules": ["otp_request"] }
+    },
+    {
+      "id": "legit_chat_sw",
+      "language": "Kiswahili",
+      "title": "Ujumbe wa kawaida wa familia",
+      "text": "Mama, nimefika salama Nairobi. Nitakupigia jioni baada ya kazi.",
+      "expect": { "max_score": 19, "band": "low" }
+    },
+    {
+      "id": "legit_warning_en",
+      "language": "English",
+      "title": "Safety reminder that tells you never to share your PIN",
+      "text": "Reminder: never share your M-PESA PIN with anyone, including people claiming to be staff.",
+      "expect": { "max_score": 19, "band": "low", "absent_rules": ["credential_request"] }
+    }
+  ]
+}

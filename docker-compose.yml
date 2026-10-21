@@ -1,0 +1,24 @@
+# Optional PostgreSQL for LINDA. The app itself runs with the scripts in
+# ./scripts (see README). SQLite works out of the box if you skip this.
+#
+#   docker compose up -d db
+#   export LINDA_DATABASE_URL=postgresql+psycopg://linda:linda@localhost:5432/linda
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: linda
+      POSTGRES_PASSWORD: linda
+      POSTGRES_DB: linda
+    ports:
+      - "5432:5432"
+    volumes:
+      - linda-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U linda -d linda"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  linda-pg:

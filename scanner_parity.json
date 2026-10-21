@@ -1,0 +1,1419 @@
+{
+ "messages": [
+  {
+   "text": "Dear customer, this is Safaricom customer care. Your M-PESA account will be suspended today. To stop this, send the code you will receive to 0700000142 or verify at http://mpesa-care-verify.test/login",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "account_threat",
+    "brand_mention",
+    "link_present",
+    "otp_request",
+    "staff_claim",
+    "verification_request"
+   ],
+   "highlights": 9
+  },
+  {
+   "text": "Habari, nimekutumia Ksh 2,500 kimakosa kwa M-PESA. Tafadhali nirudishie pesa hizo haraka kwa namba hii 0700000117. Mungu akubariki.",
+   "score": 50,
+   "band": "high",
+   "category": "reversal",
+   "rules": [
+    "brand_mention",
+    "reversal_story",
+    "urgency"
+   ],
+   "highlights": 5
+  },
+  {
+   "text": "Bro nimekusendia doh 1,500 kimakosa, ilikuwa ya rent. Nirudishie sasa hivi tafadhali, piga simu 0700000117 nikueleze.",
+   "score": 62,
+   "band": "high",
+   "category": "reversal",
+   "rules": [
+    "call_back",
+    "reversal_story",
+    "urgency"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "CONGRATULATIONS! You have won KES 50,000 in the Safaricom Bonga Bonanza promotion. Pay a registration fee of Ksh 1,200 to till 000123 to claim your prize within 2 hours.",
+   "score": 85,
+   "band": "very_high",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "brand_mention",
+    "prize_promo",
+    "urgency"
+   ],
+   "highlights": 9
+  },
+  {
+   "text": "You qualify for a Fuliza limit boost to Ksh 25,000. Update your details now at https://fuliza-boost.test/kyc/update before the offer expires today.",
+   "score": 89,
+   "band": "very_high",
+   "category": "loan",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "loan_offer",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 8
+  },
+  {
+   "text": "Mteja mpendwa, laini yako itafungwa leo tu. Mhudumu wa huduma kwa wateja anahitaji uthibitishe usajili. Nitumie PIN yako ya M-PESA ili tuthibitishe akaunti.",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "account_threat",
+    "brand_mention",
+    "credential_request",
+    "staff_claim",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 7
+  },
+  {
+   "text": "Hello, M-PESA department here. To receive your reversal please dial *33*0000*0700000142# and wait for confirmation.",
+   "score": 63,
+   "band": "high",
+   "category": "social_engineering",
+   "rules": [
+    "brand_mention",
+    "dial_code",
+    "staff_claim"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Uko shortlisted! Nafasi ya kazi ya driver iko wazi. Tuma interview fee ya bob 800 kwa till 000456 ili upokee barua ya kazi.",
+   "score": 35,
+   "band": "caution",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "job_offer"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Hi tenant, do not use the old paybill. Pay this month's rent to this number 0700000188 urgently, the bank account is closed.",
+   "score": 52,
+   "band": "high",
+   "category": "payment_redirection",
+   "rules": [
+    "account_threat",
+    "payment_redirection",
+    "urgency"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Your login code is 482913. Do not share this code with anyone. It expires in 5 minutes.",
+   "score": 12,
+   "band": "low",
+   "category": "social_engineering",
+   "rules": [
+    "urgency"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "Mama, nimefika salama Nairobi. Nitakupigia jioni baada ya kazi.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Reminder: never share your M-PESA PIN with anyone, including people claiming to be staff.",
+   "score": 8,
+   "band": "low",
+   "category": null,
+   "rules": [
+    "brand_mention"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "Habari, nimekutumia Ksh 3,450 kimakosa kwa M-PESA. Tafadhali nirudishie pesa hizo haraka kwa namba hii 0700000112. Asante.",
+   "score": 50,
+   "band": "high",
+   "category": "reversal",
+   "rules": [
+    "brand_mention",
+    "reversal_story",
+    "urgency"
+   ],
+   "highlights": 5
+  },
+  {
+   "text": "Habari, nimekutumia Ksh 2,500 kimakosa kwa M-PESA. Tafadhali nirudishie pesa hizo haraka kwa namba hii 0700000113. Asante.",
+   "score": 50,
+   "band": "high",
+   "category": "reversal",
+   "rules": [
+    "brand_mention",
+    "reversal_story",
+    "urgency"
+   ],
+   "highlights": 5
+  },
+  {
+   "text": "Samahani ndugu, nimetuma Ksh 3,450 kwa namba yako kimakosa. Nirudishie tafadhali, ni pesa ya hospitali. Mungu akubariki.",
+   "score": 45,
+   "band": "high",
+   "category": "reversal",
+   "rules": [
+    "emergency_story",
+    "reversal_story"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Samahani ndugu, nimetuma Ksh 2,500 kwa namba yako kimakosa. Nirudishie tafadhali, ni pesa ya hospitali.",
+   "score": 45,
+   "band": "high",
+   "category": "reversal",
+   "rules": [
+    "emergency_story",
+    "reversal_story"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Mteja, Ksh 1,500 imeingia kwako kwa makosa. Rudisha pesa hizo leo tu kwa 0700000111 ama tutafunga laini yako.",
+   "score": 42,
+   "band": "caution",
+   "category": "reversal",
+   "rules": [
+    "reversal_story",
+    "urgency"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Mteja, Ksh 2,500 imeingia kwako kwa makosa. Rudisha pesa hizo leo tu kwa 0700000113 ama tutafunga laini yako.",
+   "score": 42,
+   "band": "caution",
+   "category": "reversal",
+   "rules": [
+    "reversal_story",
+    "urgency"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Bro nimekusendia doh Ksh 2,500 kimakosa, ilikuwa ya rent. Nirudishie sasa hivi tafadhali, piga simu 0700000111.",
+   "score": 62,
+   "band": "high",
+   "category": "reversal",
+   "rules": [
+    "call_back",
+    "reversal_story",
+    "urgency"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Bro nimekusendia doh Ksh 5,000 kimakosa, ilikuwa ya rent. Nirudishie sasa hivi tafadhali, piga simu 0700000115. Asante.",
+   "score": 62,
+   "band": "high",
+   "category": "reversal",
+   "rules": [
+    "call_back",
+    "reversal_story",
+    "urgency"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Sema msee, nimekutumia Ksh 50,000 bila kujua. Nirudishie haraka bana, nimekwama hapa.",
+   "score": 57,
+   "band": "high",
+   "category": "reversal",
+   "rules": [
+    "emergency_story",
+    "reversal_story",
+    "urgency"
+   ],
+   "highlights": 3
+  },
+  {
+   "text": "Sema msee, nimekutumia Ksh 1,500 bila kujua. Nirudishie haraka bana, nimekwama hapa. Asante.",
+   "score": 57,
+   "band": "high",
+   "category": "reversal",
+   "rules": [
+    "emergency_story",
+    "reversal_story",
+    "urgency"
+   ],
+   "highlights": 3
+  },
+  {
+   "text": "Dear customer, this is Safaricom customer care. Your M-PESA account will be suspended today. To stop this, send the code you will receive to 0700000145 or verify at http://mpesa-care-verify.test/login",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "account_threat",
+    "brand_mention",
+    "link_present",
+    "otp_request",
+    "staff_claim",
+    "verification_request"
+   ],
+   "highlights": 9
+  },
+  {
+   "text": "DEAR CUSTOMER, THIS IS SAFARICOM CUSTOMER CARE. YOUR M-PESA ACCOUNT WILL BE SUSPENDED TODAY. TO STOP THIS, SEND THE CODE YOU WILL RECEIVE TO 0700000142 OR VERIFY AT HTTP://MPESA-CARE-VERIFY.TEST/LOGIN",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "account_threat",
+    "brand_mention",
+    "link_present",
+    "otp_request",
+    "staff_claim",
+    "verification_request"
+   ],
+   "highlights": 9
+  },
+  {
+   "text": "Safaricom: Dear customer, a reversal of Ksh 1,500 is pending on your M-PESA. To receive it, send the code you will receive to this number or confirm at https://mpesa-care-verify.test/verify. Act within 24 minutes. God bless.",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "otp_request",
+    "payment_redirection",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 9
+  },
+  {
+   "text": "Safaricom: Dear customer, a reversal of Ksh 25,000 is pending on your M-PESA. To receive it, send the code you will receive to this number or confirm at http://mpesa-care-verify.test/reversal. Act within 30 minutes.",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "otp_request",
+    "payment_redirection",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 9
+  },
+  {
+   "text": "M-PESA support: we detected an error on your line. Share the OTP you received to verify your account at http://mpesa-care-verify.test/login urgently.",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "otp_request",
+    "staff_claim",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 8
+  },
+  {
+   "text": "M-PESA SUPPORT: WE DETECTED AN ERROR ON YOUR LINE. SHARE THE OTP YOU RECEIVED TO VERIFY YOUR ACCOUNT AT HTTPS://MPESA-CARE-VERIFY.TEST/VERIFY URGENTLY. GOD BLESS.",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "otp_request",
+    "staff_claim",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 8
+  },
+  {
+   "text": "Mteja mpendwa, huyu ni mhudumu wa huduma kwa wateja. Akaunti yako ya M-PESA itafungwa leo. Nitumie code utakayopokea ili tuthibitishe akaunti. http://mpesa-care-verify.test/login Mungu akubariki.",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "account_threat",
+    "brand_mention",
+    "link_present",
+    "otp_request",
+    "staff_claim",
+    "verification_request"
+   ],
+   "highlights": 8
+  },
+  {
+   "text": "MTEJA MPENDWA, HUYU NI MHUDUMU WA HUDUMA KWA WATEJA. AKAUNTI YAKO YA M-PESA ITAFUNGWA LEO. NITUMIE CODE UTAKAYOPOKEA ILI TUTHIBITISHE AKAUNTI. HTTP://MPESA-CARE-VERIFY.TEST/LOGIN ASANTE.",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "account_threat",
+    "brand_mention",
+    "link_present",
+    "otp_request",
+    "staff_claim",
+    "verification_request"
+   ],
+   "highlights": 8
+  },
+  {
+   "text": "Kutoka Safaricom: laini yako itazimwa. Tuma msimbo uliopokea kwa 0700000142 haraka ili tuthibitishe usajili.",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "account_threat",
+    "brand_mention",
+    "otp_request",
+    "staff_claim",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 6
+  },
+  {
+   "text": "KUTOKA SAFARICOM: LAINI YAKO ITAZIMWA. TUMA MSIMBO ULIOPOKEA KWA 0700000143 HARAKA ILI TUTHIBITISHE USAJILI.",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "account_threat",
+    "brand_mention",
+    "otp_request",
+    "staff_claim",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 6
+  },
+  {
+   "text": "CONGRATULATIONS! You have won Ksh 2,500 in the Safaricom Bonga Bonanza promotion. Pay a registration fee of Ksh 300 to till 000713 to claim your prize within 12 hours. Thanks.",
+   "score": 85,
+   "band": "very_high",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "brand_mention",
+    "prize_promo",
+    "urgency"
+   ],
+   "highlights": 9
+  },
+  {
+   "text": "CONGRATULATIONS! You have won Ksh 25,000 in the Safaricom Bonga Bonanza promotion. Pay a registration fee of Ksh 1,200 to till 000408 to claim your prize within 24 hours. Thanks.",
+   "score": 85,
+   "band": "very_high",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "brand_mention",
+    "prize_promo",
+    "urgency"
+   ],
+   "highlights": 9
+  },
+  {
+   "text": "Hongera! Umeshinda Ksh 1,500 kwa promotion ya Bonga. Tuma ada ya Ksh 1,200 ili upokee zawadi yako. Maelezo: https://bonga-bonanza-claim.test/claim Asante.",
+   "score": 85,
+   "band": "very_high",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "brand_mention",
+    "link_present",
+    "prize_promo"
+   ],
+   "highlights": 9
+  },
+  {
+   "text": "Hongera! Umeshinda Ksh 3,450 kwa promotion ya Bonga. Tuma ada ya Ksh 300 ili upokee zawadi yako. Maelezo: https://bonga-bonanza-claim.test/claim",
+   "score": 85,
+   "band": "very_high",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "brand_mention",
+    "link_present",
+    "prize_promo"
+   ],
+   "highlights": 9
+  },
+  {
+   "text": "You are our lucky draw winner of Ksh 5,000. Claim at https://bonga-bonanza-claim.test/claim after paying a processing fee of Ksh 800. God bless.",
+   "score": 85,
+   "band": "very_high",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "brand_mention",
+    "link_present",
+    "prize_promo"
+   ],
+   "highlights": 5
+  },
+  {
+   "text": "You are our lucky draw winner of Ksh 50,000. Claim at https://bonga-bonanza-claim.test/claim after paying a processing fee of Ksh 1,200. God bless.",
+   "score": 85,
+   "band": "very_high",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "brand_mention",
+    "link_present",
+    "prize_promo"
+   ],
+   "highlights": 5
+  },
+  {
+   "text": "You qualify for a Fuliza limit boost to Ksh 5,000. Update your details now at https://fuliza-boost.test/kyc/update before the offer expires today.",
+   "score": 89,
+   "band": "very_high",
+   "category": "loan",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "loan_offer",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 8
+  },
+  {
+   "text": "You qualify for a Fuliza limit boost to Ksh 1,500. Update your details now at https://fuliza-boost.test/limit before the offer expires today. God bless.",
+   "score": 89,
+   "band": "very_high",
+   "category": "loan",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "loan_offer",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 8
+  },
+  {
+   "text": "Fuliza limit increase approved! Confirm your account at https://fuliza-boost.test/kyc/update to receive Ksh 3,450 instantly.",
+   "score": 77,
+   "band": "very_high",
+   "category": "loan",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "loan_offer",
+    "verification_request"
+   ],
+   "highlights": 6
+  },
+  {
+   "text": "Fuliza limit increase approved! Confirm your account at https://fuliza-boost.test/limit to receive Ksh 25,000 instantly. God bless.",
+   "score": 77,
+   "band": "very_high",
+   "category": "loan",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "loan_offer",
+    "verification_request"
+   ],
+   "highlights": 6
+  },
+  {
+   "text": "Umehitimu mkopo wa Ksh 2,500. Thibitisha akaunti yako hapa https://fuliza-boost.test/kyc/update leo tu. Asante.",
+   "score": 89,
+   "band": "very_high",
+   "category": "loan",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "loan_offer",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 7
+  },
+  {
+   "text": "Umehitimu mkopo wa Ksh 2,500. Thibitisha akaunti yako hapa https://fuliza-boost.test/limit leo tu. God bless.",
+   "score": 89,
+   "band": "very_high",
+   "category": "loan",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "loan_offer",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 7
+  },
+  {
+   "text": "Uko shortlisted! Nafasi ya kazi ya driver iko wazi. Tuma interview fee ya Ksh 1,500 kwa till 000595 ili upokee barua ya kazi. Mungu akubariki.",
+   "score": 35,
+   "band": "caution",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "job_offer"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Uko shortlisted! Nafasi ya kazi ya driver iko wazi. Tuma interview fee ya Ksh 1,500 kwa till 000287 ili upokee barua ya kazi.",
+   "score": 35,
+   "band": "caution",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "job_offer"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Job offer: you have been shortlisted for a hotel vacancy. Pay the application fee of Ksh 800 at https://kazi-shortlist.test/apply to book your interview. Asante.",
+   "score": 43,
+   "band": "caution",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "job_offer",
+    "link_present"
+   ],
+   "highlights": 5
+  },
+  {
+   "text": "Job offer: you have been shortlisted for a hotel vacancy. Pay the application fee of Ksh 1,500 at https://kazi-shortlist.test/apply to book your interview. Asante.",
+   "score": 43,
+   "band": "caution",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "job_offer",
+    "link_present"
+   ],
+   "highlights": 5
+  },
+  {
+   "text": "Hi tenant, do not use the old paybill. Pay this month's rent to this number 0700000190 urgently, the bank account is closed. God bless.",
+   "score": 52,
+   "band": "high",
+   "category": "payment_redirection",
+   "rules": [
+    "account_threat",
+    "payment_redirection",
+    "urgency"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Hi tenant, do not use the old paybill. Pay this month's rent to this number 0700000189 urgently, the bank account is closed.",
+   "score": 52,
+   "band": "high",
+   "category": "payment_redirection",
+   "rules": [
+    "account_threat",
+    "payment_redirection",
+    "urgency"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Dear parent, school fees should now be sent to our new till 000721. Don't use the old paybill. Deadline today. God bless.",
+   "score": 25,
+   "band": "caution",
+   "category": "payment_redirection",
+   "rules": [
+    "payment_redirection"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "Dear parent, school fees should now be sent to our new till 000747. Don't use the old paybill. Deadline today. Asante.",
+   "score": 25,
+   "band": "caution",
+   "category": "payment_redirection",
+   "rules": [
+    "payment_redirection"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "MUM I'M STUCK AT THE HOSPITAL AFTER AN ACCIDENT, MY PHONE IS OFF. SEND KSH 5,000 TO THIS NUMBER 0700000269 URGENTLY, DON'T TELL ANYONE. ASANTE.",
+   "score": 62,
+   "band": "high",
+   "category": "social_engineering",
+   "rules": [
+    "emergency_story",
+    "payment_redirection",
+    "secrecy",
+    "urgency"
+   ],
+   "highlights": 6
+  },
+  {
+   "text": "Mum I'm stuck at the hospital after an accident, my phone is off. Send Ksh 3,450 to this number 0700000208 urgently, don't tell anyone.",
+   "score": 62,
+   "band": "high",
+   "category": "social_engineering",
+   "rules": [
+    "emergency_story",
+    "payment_redirection",
+    "secrecy",
+    "urgency"
+   ],
+   "highlights": 6
+  },
+  {
+   "text": "DHARURA! NIMESHIKWA NA POLISI, NITUMIE KSH 5,000 HARAKA KWA 0700000297. THANKS.",
+   "score": 27,
+   "band": "caution",
+   "category": "social_engineering",
+   "rules": [
+    "emergency_story",
+    "urgency"
+   ],
+   "highlights": 3
+  },
+  {
+   "text": "Dharura! Nimeshikwa na polisi, nitumie Ksh 3,450 haraka kwa 0700000263.",
+   "score": 27,
+   "band": "caution",
+   "category": "social_engineering",
+   "rules": [
+    "emergency_story",
+    "urgency"
+   ],
+   "highlights": 3
+  },
+  {
+   "text": "KRA: you are eligible for a tax refund of Ksh 5,000. Verify your details at https://kra-refund-portal.test/verify within 24 hours. God bless.",
+   "score": 99,
+   "band": "very_high",
+   "category": "reversal",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "reversal_story",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 6
+  },
+  {
+   "text": "KRA: you are eligible for a tax refund of Ksh 2,500. Verify your details at https://kra-refund-portal.test/verify within 30 hours.",
+   "score": 99,
+   "band": "very_high",
+   "category": "reversal",
+   "rules": [
+    "brand_mention",
+    "link_present",
+    "reversal_story",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 6
+  },
+  {
+   "text": "Your iTax account will be suspended. Update your PIN details at https://kra-refund-portal.test/verify immediately.",
+   "score": 84,
+   "band": "very_high",
+   "category": "verification",
+   "rules": [
+    "account_threat",
+    "brand_mention",
+    "link_present",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 5
+  },
+  {
+   "text": "Your iTax account will be suspended. Update your PIN details at https://kra-refund-portal.test/verify immediately. Asante.",
+   "score": 84,
+   "band": "very_high",
+   "category": "verification",
+   "rules": [
+    "account_threat",
+    "brand_mention",
+    "link_present",
+    "urgency",
+    "verification_request"
+   ],
+   "highlights": 5
+  },
+  {
+   "text": "Equity Bank security team: confirm your PIN and the code we just sent to keep your account active. Thanks.",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "brand_mention",
+    "credential_request",
+    "otp_request"
+   ],
+   "highlights": 3
+  },
+  {
+   "text": "Equity Bank security team: confirm your PIN and the code we just sent to keep your account active.",
+   "score": 100,
+   "band": "very_high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "brand_mention",
+    "credential_request",
+    "otp_request"
+   ],
+   "highlights": 3
+  },
+  {
+   "text": "KCB alert: your card is blocked. Reply with your PIN to reactivate it today. Asante.",
+   "score": 68,
+   "band": "high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "brand_mention",
+    "credential_request"
+   ],
+   "highlights": 2
+  },
+  {
+   "text": "KCB alert: your card is blocked. Reply with your PIN to reactivate it today.",
+   "score": 68,
+   "band": "high",
+   "category": "otp_pin_harvest",
+   "rules": [
+    "brand_mention",
+    "credential_request"
+   ],
+   "highlights": 2
+  },
+  {
+   "text": "Hello, M-PESA department here. To receive your reversal please dial *33*0000*0700000286# and wait for confirmation.",
+   "score": 63,
+   "band": "high",
+   "category": "social_engineering",
+   "rules": [
+    "brand_mention",
+    "dial_code",
+    "staff_claim"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Hello, M-PESA department here. To receive your reversal please dial *33*0000*0700000288# and wait for confirmation. Asante.",
+   "score": 63,
+   "band": "high",
+   "category": "social_engineering",
+   "rules": [
+    "brand_mention",
+    "dial_code",
+    "staff_claim"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Safaricom agent: piga *21*0700000264# ili upokee bonus yako.",
+   "score": 63,
+   "band": "high",
+   "category": "social_engineering",
+   "rules": [
+    "brand_mention",
+    "dial_code",
+    "staff_claim"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Safaricom agent: piga *21*0700000216# ili upokee bonus yako. God bless.",
+   "score": 63,
+   "band": "high",
+   "category": "social_engineering",
+   "rules": [
+    "brand_mention",
+    "dial_code",
+    "staff_claim"
+   ],
+   "highlights": 4
+  },
+  {
+   "text": "Hongera mshindi! Umechaguliwa kupokea zawadi ya Ksh 1,500. Lipa ada ya usajili Ksh 1,200 kwa 0700000228 kupokea.",
+   "score": 75,
+   "band": "very_high",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "job_offer",
+    "prize_promo"
+   ],
+   "highlights": 5
+  },
+  {
+   "text": "HONGERA MSHINDI! UMECHAGULIWA KUPOKEA ZAWADI YA KSH 25,000. LIPA ADA YA USAJILI KSH 1,200 KWA 0700000261 KUPOKEA.",
+   "score": 75,
+   "band": "very_high",
+   "category": "prize",
+   "rules": [
+    "advance_fee",
+    "job_offer",
+    "prize_promo"
+   ],
+   "highlights": 5
+  },
+  {
+   "text": "SOMEONE SHARED PRIVATE PHOTOS OF YOU. PAY KSH 1,500 TO 0700000203 TO SEE WHO IT IS BEFORE THEY ARE POSTED. KEEP THIS SECRET.",
+   "score": 10,
+   "band": "low",
+   "category": "social_engineering",
+   "rules": [
+    "secrecy"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "Someone shared private photos of you. Pay Ksh 800 to 0700000237 to see who it is before they are posted. Keep this secret. God bless.",
+   "score": 10,
+   "band": "low",
+   "category": "social_engineering",
+   "rules": [
+    "secrecy"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "Your login code is 478436. Do not share this code with anyone. It expires in 5 minutes. God bless.",
+   "score": 12,
+   "band": "low",
+   "category": "social_engineering",
+   "rules": [
+    "urgency"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "Your login code is 885799. Do not share this code with anyone. It expires in 5 minutes.",
+   "score": 12,
+   "band": "low",
+   "category": "social_engineering",
+   "rules": [
+    "urgency"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "198580 is your verification code. Never share it, our staff will never ask for it. God bless.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "258941 is your verification code. Never share it, our staff will never ask for it. Thanks.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "MAMA, NIMEFIKA SALAMA NAIROBI. NITAKUPIGIA JIONI BAADA YA KAZI.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Mama, nimefika salama Nairobi. Nitakupigia jioni baada ya kazi. Asante.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Habari ya asubuhi, tutakutana kanisani saa nne. Usisahau kuleta biblia. Asante.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Habari ya asubuhi, tutakutana kanisani saa nne. Usisahau kuleta biblia.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Leo nitachelewa kidogo, kuna jam Thika road.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Leo nitachelewa kidogo, kuna jam Thika road.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "NIAJE, TUKO AREA LEO JIONI? NITAKUWA TOWN BY SIX.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Niaje, tuko area leo jioni? Nitakuwa town by six. Asante.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Msee, ile match ilikuwa noma! Tuonane weekend. Asante.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Msee, ile match ilikuwa noma! Tuonane weekend. Mungu akubariki.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Sasa boss, ulifika poa? Nicheki ukifika. Mungu akubariki.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Sasa boss, ulifika poa? Nicheki ukifika. Asante.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "8HQKH2N1CB Confirmed. Ksh 1,500 sent to JANE W 0700000255 on 22/11/26 at 10:15 AM. New M-PESA balance is Ksh 300.",
+   "score": 8,
+   "band": "low",
+   "category": null,
+   "rules": [
+    "brand_mention"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "2N8ZF7FFL4 Confirmed. Ksh 5,000 sent to JANE W 0700000215 on 23/1/26 at 10:15 AM. New M-PESA balance is Ksh 2,300.",
+   "score": 8,
+   "band": "low",
+   "category": null,
+   "rules": [
+    "brand_mention"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "Q6ZL4HYM2R CONFIRMED. YOU HAVE RECEIVED KSH 5,000 FROM PETER K 0700000265 ON 24/10/26 AT 2:41 PM. THANKS.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "KSHG3VH3CW Confirmed. You have received Ksh 2,500 from PETER K 0700000209 on 8/8/26 at 2:41 PM. Thanks.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Your parcel from the Westlands shop will arrive tomorrow between 9am and 1pm. The rider will call before arriving. God bless.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "YOUR PARCEL FROM THE WESTLANDS SHOP WILL ARRIVE TOMORROW BETWEEN 9AM AND 1PM. THE RIDER WILL CALL BEFORE ARRIVING.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Order received. Thank you for shopping with us, your receipt number is 106268. God bless.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Order received. Thank you for shopping with us, your receipt number is 829849.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Reminder: your dental appointment is on 28/11/26 at 9:30am. Reply only if you need to reschedule.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Reminder: your dental appointment is on 4/7/26 at 9:30am. Reply only if you need to reschedule. Thanks.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Hi, the parents meeting is on Friday at 2pm in the school hall.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Hi, the parents meeting is on Friday at 2pm in the school hall.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "You have received 1GB data valid for 24 hours. Enjoy. God bless.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "You have received 1GB data valid for 24 hours. Enjoy. Thanks.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Your weekly bundle has been renewed. Dial the official menu to check your balance. God bless.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Your weekly bundle has been renewed. Dial the official menu to check your balance. Thanks.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "REMINDER: NEVER SHARE YOUR M-PESA PIN WITH ANYONE, INCLUDING PEOPLE CLAIMING TO BE STAFF. THANKS.",
+   "score": 8,
+   "band": "low",
+   "category": null,
+   "rules": [
+    "brand_mention"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "REMINDER: NEVER SHARE YOUR M-PESA PIN WITH ANYONE, INCLUDING PEOPLE CLAIMING TO BE STAFF.",
+   "score": 8,
+   "band": "low",
+   "category": null,
+   "rules": [
+    "brand_mention"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "Kumbuka: usimpe mtu yeyote PIN yako ya M-PESA.",
+   "score": 8,
+   "band": "low",
+   "category": null,
+   "rules": [
+    "brand_mention"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "Kumbuka: usimpe mtu yeyote PIN yako ya M-PESA.",
+   "score": 8,
+   "band": "low",
+   "category": null,
+   "rules": [
+    "brand_mention"
+   ],
+   "highlights": 1
+  },
+  {
+   "text": "Hi team, the stand-up moves to 10am today. See you there.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "HI TEAM, THE STAND-UP MOVES TO 10AM TODAY. SEE YOU THERE.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Please send the updated report before Thursday. Thanks. Thanks.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "PLEASE SEND THE UPDATED REPORT BEFORE THURSDAY. THANKS. ASANTE.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Our chama meeting is on Sunday at 3pm, bring your contribution book.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Our chama meeting is on Sunday at 3pm, bring your contribution book.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Weekend offer at our store: 10% off shoes. Visit us in person, no payment needed to qualify. Thanks.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  },
+  {
+   "text": "Weekend offer at our store: 10% off shoes. Visit us in person, no payment needed to qualify.",
+   "score": 0,
+   "band": "low",
+   "category": null,
+   "rules": [],
+   "highlights": 0
+  }
+ ],
+ "urls": [
+  {
+   "input": "http://mpesa-care-verify.test/login",
+   "valid": true,
+   "score": 45,
+   "band": "suspicious",
+   "flags": [
+    "brand_in_unrelated_domain",
+    "not_https",
+    "reserved_tld",
+    "suspicious_path"
+   ]
+  },
+  {
+   "input": "bit.ly/x",
+   "valid": true,
+   "score": 20,
+   "band": "caution",
+   "flags": [
+    "shortener"
+   ]
+  },
+  {
+   "input": "https://safaricorn-care.test/verify",
+   "valid": true,
+   "score": 50,
+   "band": "suspicious",
+   "flags": [
+    "lookalike_brand",
+    "reserved_tld",
+    "suspicious_path"
+   ]
+  },
+  {
+   "input": "http://41.0.0.12/a",
+   "valid": true,
+   "score": 40,
+   "band": "suspicious",
+   "flags": [
+    "ip_host",
+    "not_https"
+   ]
+  },
+  {
+   "input": "https://login.example@fuliza-boost.test/",
+   "valid": true,
+   "score": 60,
+   "band": "suspicious",
+   "flags": [
+    "brand_in_unrelated_domain",
+    "reserved_tld",
+    "userinfo_trick"
+   ]
+  },
+  {
+   "input": "https://safaricom.co.ke.account-update.test/signin",
+   "valid": true,
+   "score": 55,
+   "band": "suspicious",
+   "flags": [
+    "brand_in_unrelated_domain",
+    "excessive_subdomains",
+    "reserved_tld",
+    "suspicious_path"
+   ]
+  },
+  {
+   "input": "https://www.safaricom.co.ke/personal/m-pesa",
+   "valid": true,
+   "score": 0,
+   "band": "no_obvious",
+   "flags": [
+    "official_match"
+   ]
+  },
+  {
+   "input": "https://m-pesa-bonus-claim-now.test/claim",
+   "valid": true,
+   "score": 50,
+   "band": "suspicious",
+   "flags": [
+    "brand_in_unrelated_domain",
+    "many_hyphens",
+    "reserved_tld",
+    "suspicious_path"
+   ]
+  },
+  {
+   "input": "https://xn--safricom-9za.test/",
+   "valid": true,
+   "score": 70,
+   "band": "high",
+   "flags": [
+    "lookalike_brand",
+    "punycode",
+    "reserved_tld"
+   ]
+  },
+  {
+   "input": "https://equlty-bank.test/login",
+   "valid": true,
+   "score": 50,
+   "band": "suspicious",
+   "flags": [
+    "lookalike_brand",
+    "reserved_tld",
+    "suspicious_path"
+   ]
+  },
+  {
+   "input": "https://kra-refund-portal.test/verify",
+   "valid": true,
+   "score": 40,
+   "band": "suspicious",
+   "flags": [
+    "brand_in_unrelated_domain",
+    "reserved_tld",
+    "suspicious_path"
+   ]
+  },
+  {
+   "input": "ftp://x.test",
+   "valid": false,
+   "score": 0,
+   "band": "",
+   "flags": []
+  },
+  {
+   "input": "https://a.b.c.d.example/path?x=1",
+   "valid": true,
+   "score": 15,
+   "band": "caution",
+   "flags": [
+    "excessive_subdomains",
+    "reserved_tld"
+   ]
+  },
+  {
+   "input": "not a url",
+   "valid": false,
+   "score": 0,
+   "band": "",
+   "flags": []
+  }
+ ]
+}
